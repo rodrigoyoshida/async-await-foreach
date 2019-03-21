@@ -2,6 +2,18 @@
 
 This is a simple module that provides an asyncForEach function that allows promises to be awaited inside the loop. The asyncForEach function is also asynchronous so it needs to be treated as a promise (use then or await).
 
+## Install
+
+You can install this module using your favorite module manager (Yarn or NPM)
+
+``` shell
+yarn add async-await-foreach
+```
+
+``` shell
+npm install async-await-foreach
+```
+
 ## Import
 
 You can import it as a RequireJS module and ES6 module, as following: 

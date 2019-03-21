@@ -8,5 +8,6 @@
   },
   "keywords": [],
   "author": "Rodrigo Yoshida",
+  "repository": "https://github.com/rodrigoyoshida/async-await-foreach",
   "license": "ISC"
 }
