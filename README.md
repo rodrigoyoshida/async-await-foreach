@@ -1,6 +1,9 @@
 # Async Await forEach
 
-This is a simple module that provides an asyncForEach function that allows promises to be awaited inside the loop. The asyncForEach function is also asynchronous so it needs to be treated as a promise (use then or await).
+`async-await-foreach` provides an `asyncForEach()` function that:
+
+- Allows promises to be `await`ed inside the loop. 
+- Is also asynchronous so it returns a promise, - use `await` or `then()`
 
 ## Install
 
@@ -28,7 +31,19 @@ import asyncForEach from 'async-await-foreach'
 
 ## Usage
 
-Using 'then' to execute code after finishing the forEach loop
+Using `await` inside another async function:
+
+``` javascript
+let myArray = [1, 2, 3]
+
+await asyncForEach(myArray, async item => {
+  await myPromise(item)
+})
+
+console.log('done')
+```
+
+Using 'then':
 
 ``` javascript
 let myArray = [1, 2, 3]
@@ -40,14 +55,3 @@ asyncForEach(myArray, async item => {
 })
 ```
 
-Using inside another async function
-
-``` javascript
-let myArray = [1, 2, 3]
-
-await asyncForEach(myArray, async item => {
-  await myPromise(item)
-})
-
-console.log('done')
-```
